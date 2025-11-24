@@ -5,11 +5,11 @@ public class Dialogue {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void conversationWithHayley() {
-        System.out.println("\n======================");
+        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("   HAYLEY APPEARS");
-        System.out.println("======================");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
 
-        slow("Hayley brushes a strand of orange hair back. “You good? You look possessed.”");
+        slow("Hayley brushes a strand of orange hair back. “You good? You look possessed GIRL💜.”");
 
         System.out.println("\nChoose your response:");
         System.out.println("1. \"I’m fine. Definitely not freaking out.\"");
@@ -42,7 +42,7 @@ public class Dialogue {
         }
 
         slow("\nWe step deeper backstage… and the lights flicker again.");
-        slow("Something is waiting.");
+        slow("Something is waiting. He will not be pleased");
     }
 
     // -------------------------------------------------------
