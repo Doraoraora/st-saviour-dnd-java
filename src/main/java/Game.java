@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class Game {
-
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -28,8 +27,9 @@ public class Game {
 
         newline();
 
+
         // COMBAT STARTS
-        Player player = new Playerlayer();
+        Player player = new Player();
         Combat.startBattle(player, difficulty);
 
         newline();
@@ -54,15 +54,15 @@ public class Game {
         newline();
 
         if (r <= 3) {
-            System.out.println("++++++ 👻 BACKSTAGE SHADOW CREATURE 👻 ++++++");
+            System.out.println("++++++ 👻 BACKSTAGE SHADOW MANAGER 👻 ++++++");
             System.out.println("It crawls out from behind the amps...");
             System.out.println("Roll Required: 10");
             return 10;
         }
 
         if (r <= 5) {
-            System.out.println("++++++ 😎 MIMIC STAGE CASE 😎 ++++++");
-            System.out.println("The case suddenly grows TEETH. Nope.");
+            System.out.println("++++++ 😎 MIMIC STAGE DANCER 😎 ++++++");
+            System.out.println("The other dancer  suddenly grows TEETH. Nope.");
             System.out.println("Roll Required: 14");
             return 14;
         }

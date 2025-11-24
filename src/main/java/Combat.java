@@ -30,7 +30,7 @@ public class Combat {
             }
 
             else if (choice == 2) {
-                damage = doDanceMove();
+                damage = doDanceMove(player);
             }
 
             else {
@@ -65,21 +65,32 @@ public class Combat {
     // -------------------------------------------------------
     // SPECIAL DANCE-MOVE POWERS
     // -------------------------------------------------------
-    private static int doDanceMove() {
-        System.out.println("\nChoose a dance power:");
-        System.out.println("1. ‘Decode Dropkick’ (8–15 dmg)");
-        System.out.println("2. ‘Brick by Boring Brick Spin Attack’ (10–18 dmg)");
-        System.out.println("3. ‘Ain’t It Fun Flip’ (12–20 dmg)");
+ private static int doDanceMove(Player player) {
+    System.out.println("\nChoose a dance power:");
+    System.out.println("1. ‘Decode Dropkick’ (8–15 dmg)");
+    System.out.println("2. ‘Brick by Boring Brick Spin Attack’ (10–18 dmg)");
+    System.out.println("3. ‘Ain’t It Fun Flip’ (12–20 dmg)");
 
-        int move = getChoice(1, 3);
+    int move = getChoice(1, 3);
 
-        return switch (move) {
-            case 1 -> { slow("I leap like the ‘Decode’ music video."); yield roll(8, 15); }
-            case 2 -> { slow("I spin like I’m escaping a fairy tale."); yield roll(10, 18); }
-            case 3 -> { slow("I flip with chaotic joy."); yield roll(12, 20); }
-            default -> 0;
-        };
+    switch (move) {
+        case 1:
+            slow("I leap like the ‘Decode’ music video.");
+            return roll(8, 15);
+
+        case 2:
+            slow("I spin like I’m escaping a fairy tale.");
+            return roll(10, 18);
+
+        case 3:
+            slow("I flip with chaotic joy.");
+            return roll(12, 20);
+
+        default:
+            // Should never happen, but Java requires it
+            return 0;
     }
+}
 
     // -------------------------------------------------------
     // HELPERS
